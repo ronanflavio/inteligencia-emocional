@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  titulo = 'Teste psicológico';
+  titulo = 'Teste de Inteligência Emocional';
 
 }
