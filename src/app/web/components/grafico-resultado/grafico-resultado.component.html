@@ -1,1 +1,16 @@
-<p>grafico-resultado works!</p>
+<div style="display: block;">
+  <canvas baseChart
+    [datasets]="graficoData"
+    [options]="graficoOptions"
+    [labels]="graficoLabels"
+    [chartType]="graficoType">
+  </canvas>
+</div>
+
+<mat-list>
+  <mat-list-item *ngFor="let label of graficoLabels; let i = index">
+    <span class="titulo">{{label}}:</span>
+    <span class="valor">{{graficoData[0].data[i]}}</span>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
