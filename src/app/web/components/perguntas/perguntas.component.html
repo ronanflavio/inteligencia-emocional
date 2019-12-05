@@ -17,8 +17,8 @@
         </p>
         <mat-radio-group>
           <mat-radio-button *ngFor="let resposta of respostas"
-            (change)="responder($event.value, pergunta.id)"
-            [value]="resposta.valor">
+            (change)="responder($event.value, pergunta)"
+            [value]="resposta">
             {{resposta.nome}}
           </mat-radio-button>
         </mat-radio-group>
