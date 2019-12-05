@@ -1,14 +1,16 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <span>Título</span>
+      <span>
+        QUESTIONÁRIO
+      </span>
     </mat-card-title>
   </mat-card-header>
   <mat-divider></mat-divider>
 
   <mat-card-content>
 
-    <ol>
+    <ol class="perguntas-lista">
       <li class="perguntas-container" *ngFor="let pergunta of perguntas; let i = index">
         <p class="pergunta">
           {{pergunta.pergunta}}
