@@ -9,11 +9,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './web/pages/inicio/inicio.component';
 import { PerguntasComponent } from './web/components/perguntas/perguntas.component';
 import { BaseComponent } from './arch/components/base/base.component';
+import { GraficoResultadoComponent } from './web/components/grafico-resultado/grafico-resultado.component';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { BaseComponent } from './arch/components/base/base.component';
     AppComponent,
     InicioComponent,
     PerguntasComponent,
-    BaseComponent
+    BaseComponent,
+    GraficoResultadoComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { BaseComponent } from './arch/components/base/base.component';
     MatCardModule,
     MatDividerModule,
     MatRadioModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
