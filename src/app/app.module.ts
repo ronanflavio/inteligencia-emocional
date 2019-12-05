@@ -12,6 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './web/pages/inicio/inicio.component';
@@ -40,6 +41,7 @@ import { GraficoResultadoComponent } from './web/components/grafico-resultado/gr
     MatRadioModule,
     MatButtonModule,
     MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
