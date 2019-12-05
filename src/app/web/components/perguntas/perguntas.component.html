@@ -2,7 +2,7 @@
   <mat-card-header>
     <mat-card-title>
       <span>
-        QUESTIONÁRIO
+        Questionário
       </span>
     </mat-card-title>
   </mat-card-header>
@@ -27,7 +27,11 @@
 
   </mat-card-content>
 
-  <mat-card-actions>
-    Actions
+  <mat-divider></mat-divider>
+
+  <mat-card-actions class="text-right">
+    <button mat-raised-button color="primary" type="button" (click)="concluir()">
+      CONTINUAR
+    </button>
   </mat-card-actions>
 </mat-card>

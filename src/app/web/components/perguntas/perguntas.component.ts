@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pergunta } from '../../models/pergunta';
 import { Resposta } from '../../models/resposta';
-import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-perguntas',
@@ -14,6 +13,8 @@ export class PerguntasComponent implements OnInit {
 
   @Input() respostas: Resposta[];
 
+  @Output() enviarResultado = new EventEmitter();
+
   resultado: any = [];
 
   constructor() { }
@@ -23,6 +24,10 @@ export class PerguntasComponent implements OnInit {
 
   responder(resposta: number, pergunta: number) {
     this.resultado[pergunta] = resposta;
+  }
+
+  concluir() {
+    this.enviarResultado.emit(this.resultado);
   }
 
 }
