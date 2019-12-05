@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pergunta } from '../../models/pergunta';
+import { Resposta } from '../../models/resposta';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-perguntas',
@@ -10,7 +12,15 @@ export class PerguntasComponent implements OnInit {
 
   @Input() perguntas: Pergunta[];
 
-  constructor() { }
+  @Input() respostas: Resposta[];
+
+  form = this.fb.group({
+    respostas: [[], []]
+  });
+
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit() {
   }
