@@ -2,4 +2,11 @@
 <app-perguntas *ngIf="perguntas && perguntas.length"
   [perguntas]="perguntas"
   [respostas]="respostas"
+  [hidden]="passo != 1"
+  (enviarResultado)="enviarResultado($event)"
 ></app-perguntas>
+
+<app-grafico-resultado
+  [resultado]="resultado"
+  [hidden]="passo != 2"
+></app-grafico-resultado>

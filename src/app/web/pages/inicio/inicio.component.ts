@@ -12,9 +12,13 @@ import { Resposta } from '../../models/resposta';
 })
 export class InicioComponent extends BaseComponent implements OnInit {
 
+  passo: number = 1;
+
   perguntas: Pergunta[];
 
   respostas: Resposta[];
+
+  resultado: any;
 
   constructor(
     private questionarioService: QuestionarioService
@@ -34,6 +38,11 @@ export class InicioComponent extends BaseComponent implements OnInit {
       .subscribe(res => {
         this.respostas = res;
       });
+  }
+
+  enviarResultado(event: any) {
+    this.resultado = event;
+    this.passo = 2;
   }
 
 }
