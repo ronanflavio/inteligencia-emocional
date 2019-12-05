@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './web/pages/inicio/inicio.component';
 import { PerguntasComponent } from './web/components/perguntas/perguntas.component';
 import { BaseComponent } from './arch/components/base/base.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { BaseComponent } from './arch/components/base/base.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
