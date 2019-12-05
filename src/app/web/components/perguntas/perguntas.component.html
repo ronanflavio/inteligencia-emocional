@@ -1,35 +1,31 @@
-<form [formGroup]="form" (ngSubmit)="salvar()">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <span>Título</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
 
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>
-        <span>Título</span>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-divider></mat-divider>
+  <mat-card-content>
 
-    <mat-card-content>
+    <ol>
+      <li class="perguntas-container" *ngFor="let pergunta of perguntas; let i = index">
+        <p class="pergunta">
+          {{pergunta.pergunta}}
+        </p>
+        <mat-radio-group>
+          <mat-radio-button *ngFor="let resposta of respostas"
+            (change)="responder($event.value, pergunta.id)"
+            [value]="resposta.valor">
+            {{resposta.nome}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </li>
+    </ol>
 
-      <ol>
-        <li class="perguntas-container" *ngFor="let pergunta of perguntas; let i = index">
-          <p class="pergunta">
-            {{pergunta.pergunta}}
-          </p>
-          <mat-radio-group>
-            <mat-radio-button *ngFor="let resposta of respostas"
-              [value]="resposta.id">
-              {{resposta.nome}}
-            </mat-radio-button>
-          </mat-radio-group>
-        </li>
-      </ol>
+  </mat-card-content>
 
-    </mat-card-content>
-
-    <mat-card-actions>
-      Actions
-    </mat-card-actions>
-  </mat-card>
-
-
-</form>
+  <mat-card-actions>
+    Actions
+  </mat-card-actions>
+</mat-card>

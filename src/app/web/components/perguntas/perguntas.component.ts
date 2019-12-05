@@ -14,15 +14,15 @@ export class PerguntasComponent implements OnInit {
 
   @Input() respostas: Resposta[];
 
-  form = this.fb.group({
-    respostas: [[], []]
-  });
+  resultado: any = [];
 
-  constructor(
-    private fb: FormBuilder
-  ) { }
+  constructor() { }
 
   ngOnInit() {
+  }
+
+  responder(resposta: number, pergunta: number) {
+    this.resultado[pergunta] = resposta;
   }
 
 }
