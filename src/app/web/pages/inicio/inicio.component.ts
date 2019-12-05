@@ -3,6 +3,7 @@ import { Pergunta } from '../../models/pergunta';
 import { QuestionarioService } from '../../services/questionario.service';
 import { BaseComponent } from 'src/app/arch/components/base/base.component';
 import { takeUntil, map } from 'rxjs/operators';
+import { Resposta } from '../../models/resposta';
 
 @Component({
   selector: 'app-inicio',
@@ -13,6 +14,8 @@ export class InicioComponent extends BaseComponent implements OnInit {
 
   perguntas: Pergunta[];
 
+  respostas: Resposta[];
+
   constructor(
     private questionarioService: QuestionarioService
   ) {
@@ -20,10 +23,16 @@ export class InicioComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.questionarioService.listar()
+    this.questionarioService.perguntas()
       .pipe(takeUntil(this.destroy$))
       .subscribe(res => {
         this.perguntas = res;
+      });
+
+    this.questionarioService.respostas()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(res => {
+        this.respostas = res;
       });
   }
 
