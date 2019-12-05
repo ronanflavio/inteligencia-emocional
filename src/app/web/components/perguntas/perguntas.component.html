@@ -2,7 +2,11 @@
   <mat-card-header>
     <mat-card-title>
       <span>
-        Questionário
+        <button mat-icon-button type="button" *ngIf="perguntaAtual > 1"
+          (click)="voltar()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        Questionário - {{perguntaAtual}} / 30
       </span>
     </mat-card-title>
   </mat-card-header>
@@ -10,8 +14,9 @@
 
   <mat-card-content>
 
-    <ol class="perguntas-lista">
-      <li class="perguntas-container" *ngFor="let pergunta of perguntas; let i = index">
+    <div class="perguntas-lista">
+      <div class="perguntas-container" *ngFor="let pergunta of perguntas; let i = index"
+        [hidden]="pergunta.id != perguntaAtual">
         <p class="pergunta">
           {{pergunta.pergunta}}
         </p>
@@ -22,16 +27,24 @@
             {{resposta.nome}}
           </mat-radio-button>
         </mat-radio-group>
-      </li>
-    </ol>
+      </div>
+    </div>
 
   </mat-card-content>
 
   <mat-divider></mat-divider>
 
   <mat-card-actions class="text-right">
-    <button mat-raised-button color="primary" type="button" (click)="concluir()">
+    <button mat-raised-button color="primary" type="button"
+      [hidden]="perguntaAtual == 30"
+      [disabled]="!resultado[perguntaAtual]"
+      (click)="continuar()">
       CONTINUAR
+    </button>
+    <button mat-raised-button color="primary" type="button"
+      [hidden]="perguntaAtual != 30"
+      (click)="concluir()">
+      FINALIZAR
     </button>
   </mat-card-actions>
 </mat-card>

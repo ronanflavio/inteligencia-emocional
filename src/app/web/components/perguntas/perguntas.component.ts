@@ -15,6 +15,8 @@ export class PerguntasComponent implements OnInit {
 
   @Output() enviarResultado = new EventEmitter();
 
+  perguntaAtual: number = 1;
+
   resultado: any = [];
 
   constructor() { }
@@ -27,6 +29,16 @@ export class PerguntasComponent implements OnInit {
       pergunta: pergunta,
       resposta: resposta
     };
+  }
+
+  voltar() {
+    if (this.perguntaAtual > 1) {
+      this.perguntaAtual--;
+    }
+  }
+
+  continuar() {
+    this.perguntaAtual++;
   }
 
   concluir() {
