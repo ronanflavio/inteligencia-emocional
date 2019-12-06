@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Qual o seu nome?
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-content>
+
+      <mat-form-field appearance="outline" class="full-text-input">
+        <mat-label>Digite seu nome</mat-label>
+        <input matInput placeholder="Digite seu nome" formControlName="nome">
+        <mat-error *ngIf="form.get('nome').invalid">{{getErroNome()}}</mat-error>
+      </mat-form-field>
+
+    </mat-card-content>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-actions class="text-right">
+      <button mat-raised-button type="submit" color="primary" [disabled]="form.invalid">
+        CONTINUAR
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+</form>
