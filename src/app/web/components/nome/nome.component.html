@@ -3,7 +3,7 @@
   <mat-card>
     <mat-card-header>
       <mat-card-title>
-        Qual o seu nome?
+        Digite seu nome para começar o teste
       </mat-card-title>
     </mat-card-header>
 
@@ -12,8 +12,8 @@
     <mat-card-content>
 
       <mat-form-field appearance="outline" class="full-text-input">
-        <mat-label>Digite seu nome</mat-label>
-        <input matInput placeholder="Digite seu nome" formControlName="nome">
+        <mat-label>Qual é o seu nome?</mat-label>
+        <input matInput placeholder="Qual é o seu nome?" formControlName="nome">
         <mat-error *ngIf="form.get('nome').invalid">{{getErroNome()}}</mat-error>
       </mat-form-field>
 

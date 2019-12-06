@@ -30,7 +30,7 @@ export class NomeComponent implements OnInit {
 
   salvar() {
     this.salvarNome.emit({
-      nome: this.form.get('nome')
+      nome: this.form.value['nome']
     });
   }
 
