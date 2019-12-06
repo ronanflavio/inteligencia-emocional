@@ -16,3 +16,7 @@ mat-card-title button {
 mat-radio-button {
   margin-right: 20px;
 }
+
+.full-text-input {
+  width: 100%;
+}
