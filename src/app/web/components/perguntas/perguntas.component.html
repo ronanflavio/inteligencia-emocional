@@ -6,7 +6,7 @@
           (click)="voltar()">
           <mat-icon>keyboard_arrow_left</mat-icon>
         </button>
-        Questionário - {{perguntaAtual}} / 30
+        Questionário - {{perguntaAtual}} / {{perguntas.length}}
       </span>
     </mat-card-title>
   </mat-card-header>
@@ -36,13 +36,13 @@
 
   <mat-card-actions class="text-right">
     <button mat-raised-button color="primary" type="button"
-      [hidden]="perguntaAtual == 30"
+      [hidden]="perguntaAtual == perguntas.length"
       [disabled]="!resultado[perguntaAtual]"
       (click)="continuar()">
       CONTINUAR
     </button>
     <button mat-raised-button color="primary" type="button"
-      [hidden]="perguntaAtual != 30"
+      [hidden]="perguntaAtual != perguntas.length"
       (click)="concluir()">
       FINALIZAR
     </button>
