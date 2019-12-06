@@ -22,7 +22,8 @@ import { PerguntasComponent } from './web/components/perguntas/perguntas.compone
 import { BaseComponent } from './arch/components/base/base.component';
 import { GraficoResultadoComponent } from './web/components/grafico-resultado/grafico-resultado.component';
 import { NomeComponent } from './web/components/nome/nome.component';
-import { DescricaoComponent } from './web/components/descricao/descricao.component';
+import { QuestionarioComponent } from './web/pages/questionario/questionario.component';
+import { ResultadoComponent } from './web/pages/resultado/resultado.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { DescricaoComponent } from './web/components/descricao/descricao.compone
     BaseComponent,
     GraficoResultadoComponent,
     NomeComponent,
-    DescricaoComponent
+    QuestionarioComponent,
+    ResultadoComponent
   ],
   imports: [
     BrowserModule,
