@@ -1,11 +1,29 @@
-<mat-toolbar color="primary" class="mat-elevation-z4">
-  <mat-toolbar-row>
-    <span>
-      <a href="javascript:void(0);" routerLink="/inicio">{{titulo}}</a>
-    </span>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="page-container">
 
-<div class="container main-content">
-  <router-outlet></router-outlet>
+  <div class="page-container-wrap">
+
+    <mat-toolbar color="primary" class="mat-elevation-z4">
+      <mat-toolbar-row>
+        <span>
+          <a href="javascript:void(0);" routerLink="/inicio">{{titulo}}</a>
+        </span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div class="container main-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <mat-divider></mat-divider>
+      <small>
+        Desenvolvido por
+        <a href="https://github.com/ronanflavio" target="_blank">Ronan Flávio</a>
+      </small>
+    </div>
+  </footer>
+
 </div>
