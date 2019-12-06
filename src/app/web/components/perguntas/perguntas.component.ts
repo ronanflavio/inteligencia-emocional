@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pergunta } from '../../models/pergunta';
-import { Resposta } from '../../models/resposta';
 
 @Component({
   selector: 'app-perguntas',
@@ -11,7 +10,7 @@ export class PerguntasComponent implements OnInit {
 
   @Input() perguntas: Pergunta[];
 
-  @Input() respostas: Resposta[];
+  @Input() respostas: string[];
 
   @Output() enviarResultado = new EventEmitter();
 
