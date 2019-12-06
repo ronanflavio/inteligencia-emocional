@@ -1,10 +1,14 @@
 
-<app-perguntas *ngIf="passo == 1"
+<app-nome *ngIf="passo == 1"
+  (salvarNome)="salvarNome($event)"
+></app-nome>
+
+<app-perguntas *ngIf="passo == 2"
   [perguntas]="perguntas"
   [respostas]="respostas"
   (enviarResultado)="enviarResultado($event)"
 ></app-perguntas>
 
-<app-grafico-resultado *ngIf="passo == 2"
+<app-grafico-resultado *ngIf="passo == 3"
   [resultado]="resultado"
 ></app-grafico-resultado>

@@ -12,11 +12,13 @@ import { Resposta } from '../../models/resposta';
 })
 export class InicioComponent extends BaseComponent implements OnInit {
 
-  passo: number;
+  passo: number = 1;
 
   perguntas: Pergunta[];
 
   respostas: Resposta[];
+
+  nome: string;
 
   resultado: any;
 
@@ -31,19 +33,23 @@ export class InicioComponent extends BaseComponent implements OnInit {
       .pipe(takeUntil(this.destroy$))
       .subscribe(res => {
         this.perguntas = res;
-
-        this.questionarioService.respostas()
-          .pipe(takeUntil(this.destroy$))
-          .subscribe(res => {
-            this.respostas = res;
-            this.passo = 1;
-          });
       });
+
+    this.questionarioService.respostas()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(res => {
+        this.respostas = res;
+      });
+  }
+
+  salvarNome(event: any) {
+    this.nome = event.nome;
+    this.passo = 2;
   }
 
   enviarResultado(event: any) {
     this.resultado = event;
-    this.passo = 2;
+    this.passo = 3;
   }
 
 }
