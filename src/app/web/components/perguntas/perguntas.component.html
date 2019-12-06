@@ -15,16 +15,16 @@
   <mat-card-content>
 
     <div class="perguntas-lista">
-      <div class="perguntas-container" *ngFor="let pergunta of perguntas; let i = index"
+      <div class="perguntas-container" *ngFor="let pergunta of perguntas"
         [hidden]="pergunta.id != perguntaAtual">
         <p class="pergunta">
           {{pergunta.pergunta}}
         </p>
         <mat-radio-group>
-          <mat-radio-button *ngFor="let resposta of respostas"
-            (change)="responder($event.value, pergunta)"
-            [value]="resposta">
-            {{resposta.nome}}
+          <mat-radio-button *ngFor="let resposta of respostas; let i = index"
+            (change)="responder($event, pergunta)"
+            [value]="pergunta.respostas[i]">
+            {{resposta}}
           </mat-radio-button>
         </mat-radio-group>
       </div>

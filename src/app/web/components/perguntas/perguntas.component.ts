@@ -24,7 +24,7 @@ export class PerguntasComponent implements OnInit {
   ngOnInit() {
   }
 
-  responder(resposta: Resposta, pergunta: Pergunta) {
+  responder(resposta: number, pergunta: Pergunta) {
     this.resultado[pergunta.id] = {
       pergunta: pergunta,
       resposta: resposta

@@ -52,7 +52,7 @@ export class GraficoResultadoComponent implements OnInit {
       ];
 
       agrupamento.forEach(resposta => {
-        this.graficoData[0].data.push(this.somar(resposta, 'valor'));
+        this.graficoData[0].data.push(this.somar(resposta, 'value'));
       });
     }
   }
