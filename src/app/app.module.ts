@@ -13,12 +13,16 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './web/pages/inicio/inicio.component';
 import { PerguntasComponent } from './web/components/perguntas/perguntas.component';
 import { BaseComponent } from './arch/components/base/base.component';
 import { GraficoResultadoComponent } from './web/components/grafico-resultado/grafico-resultado.component';
+import { NomeComponent } from './web/components/nome/nome.component';
+import { DescricaoComponent } from './web/components/descricao/descricao.component';
 
 
 @NgModule({
@@ -27,7 +31,9 @@ import { GraficoResultadoComponent } from './web/components/grafico-resultado/gr
     InicioComponent,
     PerguntasComponent,
     BaseComponent,
-    GraficoResultadoComponent
+    GraficoResultadoComponent,
+    NomeComponent,
+    DescricaoComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +48,8 @@ import { GraficoResultadoComponent } from './web/components/grafico-resultado/gr
     MatButtonModule,
     MatListModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
