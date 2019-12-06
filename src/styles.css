@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f3f3f3;
+}
 mat-card-content {
   margin-top: 15px;
 }
@@ -12,9 +17,12 @@ mat-card-actions {
 mat-card-title button {
   margin-left: -25px !important;
 }
-
 mat-radio-button {
   margin-right: 20px;
+}
+mat-toolbar a, mat-toolbar a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .full-text-input {
