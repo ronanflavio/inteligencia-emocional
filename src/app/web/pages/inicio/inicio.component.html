@@ -1,14 +1,30 @@
+<h1>
+  Teste de Inteligência Emocional - Daniel Goleman
+</h1>
 
-<app-nome *ngIf="passo == 1"
+<app-nome
   (salvarNome)="salvarNome($event)"
 ></app-nome>
 
-<app-perguntas *ngIf="passo == 2"
-  [perguntas]="perguntas"
-  [respostas]="respostas"
-  (enviarResultado)="enviarResultado($event)"
-></app-perguntas>
+<br>
 
-<app-grafico-resultado *ngIf="passo == 3"
-  [resultado]="resultado"
-></app-grafico-resultado>
+<h2>
+  Você já ouviu falar de Inteligência Emocional?
+</h2>
+
+<p>
+  Trata-se da capacidade que um indivíduo tem para administrar suas próprias
+  emoções e, além disso, diz-se da capacidade de compreender as emoções alheias também.
+  Dessa forma é possível que uma pessoa que tenha uma inteligência emocional equilibrada,
+  consiga estabelecer relações saudáveis e conscientes.
+</p>
+
+<p>
+  <a href="https://pt.wikipedia.org/wiki/Daniel_Goleman" target="_blank">
+    Daniel Goleman
+  </a>
+  é um renomado psicólogo, jornalista e autor do best-seller
+  <a href="https://www.amazon.com.br/dp/B00A3D0DZG/ref=dp-kindle-redirect?_encoding=UTF8" target="_blank">
+    Inteligência Emocional.
+  </a>
+</p>
