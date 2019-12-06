@@ -32,8 +32,6 @@ export class ResultadoComponent extends BaseComponent implements OnInit {
           .pipe(takeUntil(this.destroy$))
           .subscribe(res => {
             this.resultado = res;
-            console.log(this.nome);
-            console.log(this.resultado);
 
             if (!this.nome || !this.resultado) {
               this.router.navigate(['inicio']);
